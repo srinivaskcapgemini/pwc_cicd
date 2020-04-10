@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: SrinuApi
+version: v1
+mediaType: 
+  - application/json
+protocols:
+  - HTTPS
+  - HTTP
+/srinuget:
+  get:
+    queryParameters:
+      name:
+        type: string
+        minLength: 2
+        maxLength: 39
+        example: srini
+        required: true
+      age: 
+        type: number
+        minimum: 0
+        maximum: 100
+        example: 35
+        required: true
+    responses:
+      200:
+        body:
+          example: "response from get method"
+/srinupost:
+  post:
+    body:
+      example:
+        
+          {
+            "comp":"none",
+            "sal" :"0"
+          }
+    responses:
+      201:
+        body:
+          application/json:
+            example: "response from post.......... method"
+              
+        
+            
+          
+
+
+  
